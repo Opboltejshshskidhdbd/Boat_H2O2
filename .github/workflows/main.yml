@@ -2,8 +2,8 @@ name: Build Boat APK
 
 on:
   push:
-    branches: [ "Material-You" ] # Agar aapki branch ka naam alag hai toh yahan badal dena
-  workflow_dispatch: # Isse aap manually bhi build start kar sakte ho
+    branches: [ "Material-You" ]
+  workflow_dispatch:
 
 jobs:
   build:
@@ -26,7 +26,7 @@ jobs:
         run: ./gradlew assembleDebug
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Boat-H2O2-Debug-APK
           path: app/build/outputs/apk/debug/*.apk
