@@ -289,10 +289,10 @@ public class DownloadService extends Service
 		Source_address = address;//需要提供的源->结尾不带"/"
 
 
-        API_Version_client_server_json = "https://bmclapi2.bangbang93.com/version/";
-        API_Assets = "https://resources.download.minecraft.net/"; 
-        API_Libraries = "https://libraries.minecraft.net/maven/";
-        API_Manifest_Version_json = "https://piston-meta.mojang.com/mc/game/version_manifest_v2.json";
+        API_Version_client_server_json = Source_address + "/version/";
+		API_Assets = Source_address + "/assets/";
+		API_Libraries = Source_address + "/maven/";
+		API_Manifest_Version_json = Source_address + "/mc/game/version_manifest.json";
 		
 
 		assets_root = game_directory+"/assets";
